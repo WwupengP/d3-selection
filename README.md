@@ -2,11 +2,11 @@
 
 Selections allow powerful data-driven transformation of the document object model (DOM): set [attributes](#selection_attr), [styles](#selection_style), [properties](#selection_property), [HTML](#selection_html) or [text](#selection_text) content, and more. Using the [data join](#joining-data)’s [enter](#selection_enter) and [exit](#selection_enter) selections, you can also [add](#selection_append) or [remove](#selection_remove) elements to correspond to data.
 
-选择允许对文档对象模型(DOM)进行强大的数据驱动转换:设置[attributes](#selection_attr)、[styles](#selection_style)、[properties](#selection_property)、[HTML](#selection_html)或[text](#selection_text)内容，等等。使用[data join](#joining-data)的[enter](#selection_enter)和[exit](#selection_enter)选项，您还可以[add](#selection_append)或[remove](#selection_remove)元素来对应数据。
+Selections允许对文档对象模型(DOM)进行强大的数据驱动转换:设置[attributes](#selection_attr)、[styles](#selection_style)、[properties](#selection_property)、[HTML](#selection_html)或[text](#selection_text)内容，等等。使用[data join](#joining-data)的[enter](#selection_enter)和[exit](#selection_enter)选项，您还可以[add](#selection_append)或[remove](#selection_remove)元素来对应数据。
 
 Selection methods typically return the current selection, or a new selection, allowing the concise application of multiple operations on a given selection via method chaining. For example, to set the class and color style of all paragraph elements in the current document:
 
-选择方法通常返回当前选择或新选择，允许通过方法链接对给定的选择进行多个操作的简洁应用。例如，要设置当前文档中所有段落元素的类和颜色样式:
+选择方法通常返回当前选择或新选择，允许通过方法链对给定的选择进行多个操作的简洁应用。例如，要设置当前文档中所有段落元素的类和颜色样式:
 
 ```js
 d3.selectAll("p")
@@ -16,7 +16,7 @@ d3.selectAll("p")
 
 This is equivalent to:
 
-这相当于:
+等价于：
 
 ```js
 const p = d3.selectAll("p");
@@ -26,7 +26,7 @@ p.style("color", "red");
 
 By convention, selection methods that return the current selection use *four* spaces of indent, while methods that return a new selection use only *two*. This helps reveal changes of context by making them stick out of the chain:
 
-按照惯例，返回当前选择的选择方法使用四个缩进空格，而返回新选择的方法只使用两个缩进空格。这有助于揭示上下文的变化，使它们突出在链外:
+按照惯例，返回当前选择的选择方法使用*四个*缩进空格，而返回新选择的方法只使用*两个*缩进空格。这有助于揭示上下文的变化，使它们突出在链外:
 
 ```js
 d3.select("body")
@@ -73,7 +73,7 @@ const div = d3.selectAll("div");
 * [Local Variables](#local-variables)
 * [Namespaces](#namespaces)
 
-### 选择元素
+### Selecting Elements
 
 Selection methods accept [W3C selector strings](http://www.w3.org/TR/selectors-api/) such as `.fancy` to select elements with the class *fancy*, or `div` to select DIV elements. Selection methods come in two forms: select and selectAll: the former selects only the first matching element, while the latter selects all matching elements in document order. The top-level selection methods, [d3.select](#select) and [d3.selectAll](#selectAll), query the entire document; the subselection methods, [*selection*.select](#selection_select) and [*selection*.selectAll](#selection_selectAll), restrict selection to descendants of the selected elements.
 
@@ -329,7 +329,7 @@ Returns the value of the style property with the specified *name* for the specif
 
 返回具有指定*节点*的指定*name*的style属性的值。如果*节点*具有指定的*name*内联样式，则返回其值;否则，将返回[computed property value](https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value)。参见[*selection*.style](#selection_style)。
 
-### 修改元素
+### Modifying Elements
 
 After selecting elements, use the selection’s transformation methods to affect document content. For example, to set the name attribute and color style of an anchor element:
 
@@ -601,7 +601,7 @@ selection.append(d3.creator("div"));
 
 See [namespace](#namespace) for details on supported namespace prefixes, such as for SVG elements.
 
-### 加入数据
+### Joining Data
 
 For an introduction to D3’s data joins, see the [*selection*.join notebook](https://observablehq.com/@d3/selection-join). Also see [Thinking With Joins](http://bost.ocks.org/mike/join/).
 
